@@ -1,34 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Social links profile</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+    <title>Frontend Mentor | Social links profile</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        @font-face {
+            font-family: "inter bold";
+            src: url("assets/fonts/static/Inter-Bold.ttf");
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        @font-face {
+            font-family: "inter regular";
+            src: url("assets/fonts/static/Inter-Regular.ttf");
+            font-style: normal;
+            font-weight: 600;
+        }
+
+        @font-face {
+            font-family: "inter semi bold";
+            src: url("assets/fonts/static/Inter-SemiBold.ttf");
+            font-style: normal;
+            font-weight: 400;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "inter semi bold",serif;
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+        :root {
+            --Green: hsl(75, 94%, 57%);
+            --White: hsl(0, 0%, 100%);
+            --Grey-700: hsl(0, 0%, 20%);
+            --Grey-800: hsl(0, 0%, 12%);
+            --Grey-900: hsl(0, 0%, 8%);
+        }
+
+        main {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--Grey-900);
+        }
+
+        article {
+            flex: 0 1 380px;
+            min-height: 612px;
+            padding: 40px;
+            background: var(--Grey-800);
+            border-radius: 10px;
+            text-align: center;
+            color: var(--White);
+        }
+
+        img {
+            max-width: 85px;
+            max-height: 85px;
+            border-radius: 50%;
+
+        }
+
+        article div {
+            margin-bottom: 32px;
+        }
+        a:hover{
+            background: var(--Green);
+            color: var(--Grey-700);
+        }
+        a {
+            color: var(--White);
+            text-decoration: none;
+            display: block;
+            border-radius: 10px;
+        }
+        article :nth-child(2){
+            font-family: "inter bold",serif;
+            margin-bottom: 21px;
+        }
+        article :nth-child(3){
+            color: var(--Green);
+            margin-bottom: 34px;
+        }
+        article :nth-child(4){
+            font-family: "inter regular",serif;
+            margin-bottom: 28px;
+        }
+        .social{
+            background: var(--Grey-700);
+            border-radius: 10px;
+            line-height: 46px;
+        }
+        .social:not(:last-child){
+            margin-bottom: 15px;
+        }
+        @media (max-width: 350px){
+            article{
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-
-  Jessica Randall
-  London, United Kingdom
-  "Front-end developer and avid reader."
-
-  GitHub
-  Frontend Mentor
-  LinkedIn
-  Twitter
-  Instagram
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+<main>
+    <article>
+        <div>
+            <img src="assets/images/avatar-jessica.jpeg" height="176" width="176" alt="woman with black hairs"/>
+        </div>
+        <h1>Jessica Randall</h1>
+        <p>London, United Kingdom</p>
+        <p>"Front-end developer and avid reader."</p>
+        <p class="social"><a href="#">GitHub</a></p>
+        <p class="social"><a href="#">Frontend Mentor</a></p>
+        <p class="social"><a href="#">LinkedIn</a></p>
+        <p class="social"><a href="#">Twitter</a></p>
+        <p class="social"><a href="#">Instagram</a></p>
+    </article>
+</main>
 </body>
 </html>
